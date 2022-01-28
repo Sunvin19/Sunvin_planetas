@@ -26,7 +26,8 @@ public class CalculoPeso {
         final double GRAVEDADTIERRA = 9.81; 
         final double GRAVEDADJUPITER = 24.79;
         final double GRAVEDADSATURNO = 10.44;
-        final double GRAVEDADPLUTON =  0.66;//Aquí tenemos las variables masa, fuerza total y la constantes de gravedades.
+        final double GRAVEDADPLUTON =  0.66;
+        final double GRAVEDADURANO = 8.87;//Aquí tenemos las variables masa, fuerza total y la constantes de gravedades.
         System.out.println("Buenas, calculemos el peso del astronauta en diferentes astros espaciales.");
         Scanner teclado = new Scanner(System.in);//Declaramos los escáners necesarios para el programa.
         Scanner tecladoContinuar = new Scanner(System.in);
@@ -76,6 +77,15 @@ public class CalculoPeso {
                     System.out.println("\nPonga la masa del astronauta en kg: ");
                     masa = teclado.nextDouble();//Pedimos que intoduzca la masa el usuario.
                     fuerzatotal = masa * GRAVEDADPLUTON;//El cálculo de la operación.
+                    System.out.println("\nEl peso es de: " + fuerzatotal + " Newtons");
+                    break;
+                default:
+                    System.out.println("No es posible con lo que has escrito, lo siento.");
+                case "6":
+                    System.out.println("Has escogido clacular el peso de Urano.");
+                    System.out.println("\nPonga la masa del astronauta en kg: ");
+                    masa = teclado.nextDouble();//Pedimos que intoduzca la masa el usuario.
+                    fuerzatotal = masa * GRAVEDADURANO;//El cálculo de la operación.
                     System.out.println("\nEl peso es de: " + fuerzatotal + " Newtons");
                     break;
                 default:
